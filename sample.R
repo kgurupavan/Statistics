@@ -42,44 +42,4 @@ library(dplyr)
      
     }
     
-    cleaned<-subset(brdata, time<=0 | br>=30)
-    
-    # print(nrow(cleaned))
-    if(nrow(cleaned)==0){
-      num=num+1
-      mtext(right_label,side=4,line=0.5)
-      lines(time,br,type="l")
-    }
-    else{
-      #print(h)
-    }
-    
-  }
-  text(xlim-(0.025*xlim),3,paste("n = ",num))
-  
-}
-
-br_All('PD',600)
-mtext("Breathing Rate [bpm] raw signal sets",
-      side=3,line=1.97)
-br_clean('PD',600)
-mtext("Breathing Rate [bpm] valid signal sets",
-      side=3,line=1.97)
-br_All('RD',600)
-br_clean('RD',600)
-br_All('ED',800)
-br_clean('ED',800)
-br_All('MD',1000)
-br_clean('MD',1000)
-br_All('CD',800)
-br_clean('CD',800)
-br_All('ND',800)
-br_clean('ND',800)
-br_All('FD',250)
-mtext("time(s)",
-      side=1,line=1.97)
-br_clean('FD',250)
-mtext("time(s)",
-      side=1,line=1.97)
-
-dev.off()
+ dev.off()
